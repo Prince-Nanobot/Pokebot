@@ -10,7 +10,7 @@ var waitinline = 0;
 //var pokemon = [name,level];
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = [/^>A wild/,/Hey Blue/,/broke free!/,/Times up,  Blue/,/Let's go, Blue/,/Hi Blue, Lets Train/,/Fight'em Blue/,/!battle blue/];
+      botRegex = [/^>A wild/,/Hey Blue/,/broke free!/,/Times up,  Blue/,/Let's go, Blue/,/Hi Blue, Lets Train/,/Fight'em Blue/,/!battle blue/,/fuck blue/,/catch!/];
   var i;
   for (i = 0; i < botRegex.length; i++) {
     if (request.text && botRegex[i].test(request.text)){ 
@@ -39,7 +39,8 @@ if(message == 0){
   if(hunting == 1){ 
   waitinline = 0
   botResponse = "!catch";
-  botResponse = "I'll catch this one first try!"
+  botResponse = "I'll catch this one first try!";
+  botResponse = "!catch";
   }
 }
 else if (message == 1){
@@ -47,7 +48,7 @@ else if (message == 1){
 }
 else if (message == 2){
 		botresponse = "!catch";
-		botresponse = "I'll catch you this time!"
+		botresponse = "I'll catch you this time!";
 }
 else if (message == 3){
 	hunting = 0;
@@ -66,6 +67,9 @@ botResponse = "!battle bott";
 }
 else if (message == 7){
 	botResponse = "Bring it on, twerp! You can't beat me!";
+}
+else if (message == 7){
+	botResponse = "Hey, what's your problem, kid?";
 }
 
   options = {
