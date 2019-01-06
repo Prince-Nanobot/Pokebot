@@ -43,7 +43,7 @@ else if (message == 1){
 	botResponse = "What do you want, nerd?";
 }
 else if (message == 2){
-	botresponse = "!catch I'll catch you this time!";
+	botResponse = "!catch I'll catch you this time!";
 }
 else if (message == 3){
 	hunting = 0;
