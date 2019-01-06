@@ -68,7 +68,7 @@ botResponse = "!battle bott";
 else if (message == 7){
 	botResponse = "Bring it on, twerp! You can't beat me!";
 }
-else if (message == 7){
+else if (message == 8){
 	botResponse = "Hey, what's your problem, kid?";
 }
 
