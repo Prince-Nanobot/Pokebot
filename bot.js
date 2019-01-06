@@ -1,6 +1,6 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-
+var Firstthrow = 1;
 var botID = process.env.BOT_ID;
 var hunting = 1;
 //function sleep (time) {
@@ -33,7 +33,7 @@ function respond() {
 //}
 
 function postMessage(message) {
-  var botResponse, options, body, botReq, Firstthrow;
+  var botResponse, options, body, botReq;
 if(message == 0){
   if(hunting == 1){ 
 	botResponse = "!catch I'll catch this one first try!";
