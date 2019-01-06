@@ -33,17 +33,21 @@ function respond() {
 //}
 
 function postMessage(message) {
-  var botResponse, options, body, botReq;
+  var botResponse, options, body, botReq, Firstthrow;
 if(message == 0){
   if(hunting == 1){ 
 	botResponse = "!catch I'll catch this one first try!";
+	Firstthrow = 0;
   }
 }
 else if (message == 1){
 	botResponse = "What do you want, nerd?";
 }
 else if (message == 2){
-	botResponse = "!catch I'll catch you this time!";
+	if(Firstthrow == 0){
+		botResponse = "!catch I'll catch you this time!";
+		Firstthrow = 1;
+	}
 }
 else if (message == 3){
 	hunting = 0;
