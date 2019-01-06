@@ -39,6 +39,7 @@ if(message == 0){
   if(hunting == 1){ 
   waitinline = 0;
   botResponse = "I'll catch this one first try!";
+  botResponse = "I'll catch this one first try!";
   botResponse = "!catch";
   }
 }
