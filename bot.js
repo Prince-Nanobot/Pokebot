@@ -10,7 +10,7 @@ var waitinline = 0;
 //var pokemon = [name,level];
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = [/^>A wild/,/Hey Blue/,/broke free!/,/Lets go home,  Blue/,/Let's fill that Pokedex, Blue/,/Hi Blue, Lets Train/,/Fight'em Blue/,/caught/];
+      botRegex = [/^>A wild/,/Hey Blue/,/broke free!/,/That's enough,  Blue/,/Let's make Oak proud, Blue/,/Hi Blue, Lets Train/,/Fight'em Blue/,/caught/];
   var i;
   for (i = 0; i < botRegex.length; i++) {
     if (request.text && botRegex[i].test(request.text)){ 
@@ -41,7 +41,7 @@ if(message == 0){
   }
 }
 else if (message == 1){
-	botResponse = "handshake";
+	botResponse = "Scornful Stare";
 }
 else if (message == 2){
 	waitinline = waitinline + 1;
