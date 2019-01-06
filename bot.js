@@ -10,7 +10,7 @@ var waitinline = 0;
 //var pokemon = [name,level];
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = [/^>A wild/,/Hey Red/,/broke free!/,/Lets go home,  Red/,/Let's fill that Pokedex, Red/,/Hi Red, Lets Train/,/Fight'em Red/,/caught/];
+      botRegex = [/^>A wild/,/Hey Blue/,/broke free!/,/Lets go home,  Blue/,/Let's fill that Pokedex, Blue/,/Hi Blue, Lets Train/,/Fight'em Blue/,/caught/];
   var i;
   for (i = 0; i < botRegex.length; i++) {
     if (request.text && botRegex[i].test(request.text)){ 
@@ -61,7 +61,7 @@ else if (message == 5){
 botResponse = "!train status";	
 }
 else if (message == 6){
-botResponse = "PKMN Trainer Red wants to fight";
+botResponse = "PKMN Trainer Blue wants to fight";
 botResponse = "!battle bott";
 }
 else if (message == 7){
