@@ -36,9 +36,9 @@ function postMessage(message) {
   var botResponse, options, body, botReq;
 if(message == 0){
   if(hunting == 1){ 
-  botResponse = "I'll catch this one first try!";
-  botResponse = "I'll catch this one first try!";
-  botResponse = "!catch";
+	botResponse = "I'll catch this one first try!";
+	botResponse = "I'll catch this one first try!";
+	botResponse = "!catch this pokemon";
   }
 }
 else if (message == 1){
@@ -46,8 +46,8 @@ else if (message == 1){
 	botResponse = "What do you want, nerd?";
 }
 else if (message == 2){
-		botresponse = "!catch";
-		botresponse = "I'll catch you this time!";
+	botresponse = "!catch";
+	botresponse = "I'll catch you this time!";
 }
 else if (message == 3){
 	hunting = 0;
