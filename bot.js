@@ -36,18 +36,14 @@ function postMessage(message) {
   var botResponse, options, body, botReq;
 if(message == 0){
   if(hunting == 1){ 
-	botResponse = "I'll catch this one first try!";
-	botResponse = "I'll catch this one first try!";
-	botResponse = "!catch this pokemon";
+	botResponse = "!catch I'll catch this one first try!";
   }
 }
 else if (message == 1){
 	botResponse = "What do you want, nerd?";
-	botResponse = "What do you want, nerd?";
 }
 else if (message == 2){
-	botresponse = "!catch";
-	botresponse = "I'll catch you this time!";
+	botresponse = "!catch I'll catch you this time!";
 }
 else if (message == 3){
 	hunting = 0;
@@ -61,7 +57,6 @@ else if (message == 5){
 	botResponse = "!train status";	
 }
 else if (message == 6){
-	botResponse = "PKMN Trainer Blue wants to fight";
 	botResponse = "!battle bott";
 }
 else if (message == 7){
