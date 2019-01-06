@@ -37,8 +37,7 @@ function postMessage(message) {
   var botResponse, options, body, botReq;
 if(message == 0){
   if(hunting == 1){ 
-  waitinline = 0
-  botResponse = "!catch";
+  waitinline = 0;
   botResponse = "I'll catch this one first try!";
   botResponse = "!catch";
   }
