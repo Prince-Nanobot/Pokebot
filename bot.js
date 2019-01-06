@@ -10,7 +10,7 @@ var waitinline = 0;
 //var pokemon = [name,level];
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = [/^>A wild/,/Hey Blue/,/broke free!/,/That's enough,  Blue/,/Let's make Oak proud, Blue/,/Hi Blue, Lets Train/,/Fight'em Blue/,/caught/];
+      botRegex = [/^>A wild/,/Hey Blue/,/broke free!/,/Times up,  Blue/,/Let's make Oak proud, Blue/,/Hi Blue, Lets Train/,/Fight'em Blue/,/!battle blue/];
   var i;
   for (i = 0; i < botRegex.length; i++) {
     if (request.text && botRegex[i].test(request.text)){ 
@@ -37,25 +37,25 @@ function postMessage(message) {
   var botResponse, options, body, botReq;
 if(message == 0){
   if(hunting == 1){ 
+  waitinline = 0
   botResponse = "!catch";
+  botResponse = "I'll catch this one first try!"
   }
 }
 else if (message == 1){
-	botResponse = "Scornful Stare";
+	botResponse = "What do you want, nerd?";
 }
 else if (message == 2){
-	waitinline = waitinline + 1;
-	if (waitinline == 3){
 		botresponse = "!catch";
-	}
+		botresponse = "I'll catch you this time!"
 }
 else if (message == 3){
 	hunting = 0;
-	botResponse = "I'm done for now";
+	botResponse = "I better leave some for the rest of you.";
 }
 else if (message == 4){
 	hunting = 1;
-	botResponse = "......";
+	botResponse = "Yeah, let's go!";
 }
 else if (message == 5){
 botResponse = "!train status";	
@@ -65,7 +65,7 @@ botResponse = "PKMN Trainer Blue wants to fight";
 botResponse = "!battle bott";
 }
 else if (message == 7){
-	waitinline = 0;
+	botResponse = "Bring it on, twerp! You can't beat me!";
 }
 
   options = {
