@@ -9,7 +9,7 @@ var hunting = 1;
 //var pokemon = [name,level];
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = [/^>A wild/,/Hey Blue/,/broke free!/,/Times up,  Blue/,/Let's go, Blue/,/Hi Blue, Lets Train/,/Fight'em Blue/,/!battle blue/,/fuck blue/,/catch!/];
+      botRegex = [/^>A wild/,/Hey Yellow/,/broke free!/,/Times up,  Yellow/,/Let's go, Yellow/,/Hi Yellow, Lets Train/,/Fight'em Yellow/,/!battle Yellow/,/fuck Yellow/,/catch!/];
   var i;
   for (i = 0; i < botRegex.length; i++) {
     if (request.text && botRegex[i].test(request.text)){ 
