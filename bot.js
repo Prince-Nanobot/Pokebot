@@ -13,7 +13,7 @@ var hunting = 1;
 //var pokemon = [name,level];
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = [/^>Payton Bruckmeier is going to/,/Hey Wraith/,/>Michael Fernandez is going to/,/>Garrett Jones is going to/,/>Bayne is going to/,/>Nathaniel Franklin is going to/,/Wraith, set portal/,/Mozambique here!/,/Fuck Wraith/,/'DND: Rise of Tiamat' is starting in/];
+      botRegex = [/>Payton Bruckmeier is going to/,/Hey Wraith/,/>Michael Fernandez is going to/,/>Garrett Jones is going to/,/>Bayne is going to/,/>Nathaniel Franklin is going to/,/Wraith, set portal/,/Mozambique here!/,/Fuck Wraith/,/is starting in/];
   var i;
   for (i = 0; i < botRegex.length; i++) {
     if (request.text && botRegex[i].test(request.text)){ 
@@ -72,7 +72,7 @@ else if (message == 8){
 }
 else if (message == 9){
 	if (Payton == 0 || Michael == 0 || Garrett == 0 || Nathaniel == 0 || Bayne = 0){
-	botResponse= "Not everyone has accepted the invite.";
+	botResponse = "Not everyone has accepted the invite.";
 	}
 }
 
