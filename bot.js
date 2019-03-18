@@ -1,6 +1,10 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-var Firstthrow = 1;
+var Payton = 0;
+var Michael = 0;
+var Garrett = 0;
+var Bayne = 0;
+var Nathaniel = 0;
 var botID = process.env.BOT_ID;
 var hunting = 1;
 //function sleep (time) {
@@ -9,7 +13,7 @@ var hunting = 1;
 //var pokemon = [name,level];
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = [/^>A wild/,/Hey Wraith/,/broke free!/,/Times up,  Yellow/,/Let's go, Yellow/,/Hi Yellow, Lets Train/,/Fight'em Yellow/,/!battle Yellow/,/fuck Yellow/,/!catch/];
+      botRegex = [/^>Payton Bruckmeier is going to/,/Hey Wraith/,/>Michael Fernandez is going to/,/>Garrett Jones is going to/,/>Bayne is going to/,/>Nathaniel Franklin is going to/,/Wraith, set portal/,/Mozambique here!/,/Fuck Wraith/,/unlikely phrase 2/];
   var i;
   for (i = 0; i < botRegex.length; i++) {
     if (request.text && botRegex[i].test(request.text)){ 
@@ -35,43 +39,39 @@ function respond() {
 function postMessage(message) {
   var botResponse, options, body, botReq;
 if(message == 0){
-  if(hunting == 1){ 
-	Firstthrow = 0;
+  Payton = 1;
   }
-}
 else if (message == 1){
 	botResponse = "I should've seen that coming.";
 }
 else if (message == 2){
-	if(Firstthrow == 0){
-		Firstthrow = 1;
-	}
+	Michael = 1;
 }
 else if (message == 3){
-	hunting = 0;
-	botResponse = "I better leave some for the rest of you.";
+	Garrett = 1;
 }
 else if (message == 4){
-	hunting = 1;
-	botResponse = "Yeah, let's go!";
+	Bayne = 1;
 }
 else if (message == 5){
-	botResponse = "!train status";	
+	Nathaniel = 1;
 }
 else if (message == 6){
-	botResponse = "!battle bott";
+	botResponse = "Setting Portal";
+	Payton = 0;
+	Michael = 0;
+	Garrett = 0;
+	Bayne = 0;
+	Nathaniel = 0;
 }
 else if (message == 7){
-	botResponse = "Bring it on, twerp! You can't beat me!";
+	botResponse = "Not today.";
 }
 else if (message == 8){
-	botResponse = "Hey, what's your problem, kid?";
+	botResponse = "You challenged the wrong person.";
 }
 else if (message == 9){
-	if(Firstthrow == 0){
-		botResponse = "!catch";
-		Firstthrow = 1;
-	}	
+	botResponse= "This path is unprogrammed.";
 }
 
   options = {
