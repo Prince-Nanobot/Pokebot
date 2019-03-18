@@ -71,8 +71,8 @@ else if (message == 8){
 	botResponse = "You challenged the wrong person.";
 }
 else if (message == 9){
-	if (Payton == 0 || Michael == 0 || Garrett == 0 || Nathaniel == 0 || Bayne = 0){
-	botResponse = "Not everyone has accepted the invite.";
+	if (Bayne = 0){
+		botResponse = "Not everyone has accepted the invite.";
 	}
 }
 
